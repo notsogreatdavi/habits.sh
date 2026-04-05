@@ -1,5 +1,6 @@
-import { describe, expect, it } from "vitest"
-import "./localStorage-mock"
+import { installLocalStorageMock, localStorageMock } from "./localStorage-mock"
+
+installLocalStorageMock()
 
 describe("test environment", () => {
   it("executes correctly", () => {
@@ -7,8 +8,8 @@ describe("test environment", () => {
   })
 
   it("has access to localStorage via mock", () => {
-    localStorage.setItem("test", "habits.sh")
-    expect(localStorage.getItem("test")).toBe("habits.sh")
-    localStorage.removeItem("test")
+    localStorageMock.setItem("test", "habits.sh")
+    expect(localStorageMock.getItem("test")).toBe("habits.sh")
+    localStorageMock.removeItem("test")
   })
 })

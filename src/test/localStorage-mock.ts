@@ -16,7 +16,9 @@ export const localStorageMock = (() => {
   }
 })()
 
-Object.defineProperty(window, "localStorage", {
-  value: localStorageMock,
-  writable: true,
-})
+export function installLocalStorageMock() {
+  Object.defineProperty(window, "localStorage", {
+    value: localStorageMock,
+    writable: true,
+  })
+}
