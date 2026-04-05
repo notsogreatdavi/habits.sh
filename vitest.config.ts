@@ -17,7 +17,7 @@ export default defineConfig({
         branches: 70,
       },
       include: ["src/hooks/**", "src/lib/**"],
-      exclude: ["src/types/**", "src/app/**", "src/test/**"],
+      exclude: ["src/types/**", "src/app/**", "src/test/**", "**/.gitkeep"],
     },
   },
   resolve: {

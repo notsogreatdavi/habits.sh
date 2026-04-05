@@ -1,5 +1,7 @@
 # habits.sh
 
+[![CI](https://github.com/notsogreatdavi/habits.sh/actions/workflows/ci.yml/badge.svg)](https://github.com/notsogreatdavi/habits.sh/actions/workflows/ci.yml)
+
 > Rastreador de hábitos para desenvolvedores — com estética de terminal.
 
 ```
