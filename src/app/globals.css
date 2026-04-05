@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Typography — monospace only */
+  --font-sans: var(--font-jetbrains-mono);
+  --font-mono: var(--font-jetbrains-mono);
+
+  /* Terminal palette */
+  --color-surface: #09090b;          /* zinc-950 — fundo principal */
+  --color-surface-raised: #18181b;   /* zinc-900 — cards, painéis */
+  --color-surface-border: #3f3f46;   /* zinc-700 — bordas */
+  --color-primary: #4ade80;          /* green-400 — texto principal, prompts */
+  --color-secondary: #a1a1aa;        /* zinc-400 — labels, texto auxiliar */
+  --color-accent: #fbbf24;           /* amber-400 — streaks, destaques */
+  --color-danger: #f87171;           /* red-400 — erros */
+  --color-muted: #52525b;            /* zinc-600 — texto desativado */
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--font-jetbrains-mono), "Fira Code", "Cascadia Code", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove scrollbar styling to keep terminal feel */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+}
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
