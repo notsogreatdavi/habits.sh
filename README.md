@@ -34,15 +34,15 @@ O app roda inteiramente no browser. Não há backend, não há conta, não há s
 
 ## Stack
 
-| Camada        | Tecnologia                              |
-|---------------|-----------------------------------------|
-| Framework     | Next.js 16 (App Router)                 |
-| UI            | React 19                                |
-| Linguagem     | TypeScript 5 (Strict Mode)              |
-| Estilo        | Tailwind CSS v4                         |
-| Persistência  | `localStorage` (Local-First, sem backend) |
-| Testes        | Vitest + React Testing Library          |
-| Fonte         | JetBrains Mono                          |
+| Camada       | Tecnologia                                |
+| ------------ | ----------------------------------------- |
+| Framework    | Next.js 16 (App Router)                   |
+| UI           | React 19                                  |
+| Linguagem    | TypeScript 5 (Strict Mode)                |
+| Estilo       | Tailwind CSS v4                           |
+| Persistência | `localStorage` (Local-First, sem backend) |
+| Testes       | Vitest + React Testing Library            |
+| Fonte        | JetBrains Mono                            |
 
 ---
 
@@ -89,12 +89,25 @@ Acesse `http://localhost:3000`.
 ### Outros comandos
 
 ```bash
-pnpm build        # build de produção
-pnpm lint         # ESLint
-pnpm lint:fix     # ESLint com auto-fix
-pnpm test         # Vitest em modo watch
-pnpm test run     # Vitest (CI — roda uma vez e sai)
+pnpm build          # build de produção
+pnpm lint           # ESLint
+pnpm lint:fix       # ESLint com auto-fix
+pnpm format         # Prettier (auto-fix)
+pnpm format:check   # Prettier (verificação)
+pnpm test           # Vitest em modo watch
+pnpm test:run       # Vitest (CI — roda uma vez e sai)
+pnpm test:coverage  # Vitest com relatório de cobertura
 ```
+
+### Deploy (Vercel)
+
+Para ativar o CD, configure os seguintes secrets no repositório (`Settings → Secrets → Actions`):
+
+| Secret              | Como obter                                                     |
+| ------------------- | -------------------------------------------------------------- |
+| `VERCEL_TOKEN`      | [vercel.com/account/tokens](https://vercel.com/account/tokens) |
+| `VERCEL_ORG_ID`     | `vercel env pull` ou dashboard do projeto                      |
+| `VERCEL_PROJECT_ID` | `vercel env pull` ou dashboard do projeto                      |
 
 ---
 

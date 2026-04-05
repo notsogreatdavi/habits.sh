@@ -1,0 +1,4 @@
+.github
+src/test
+vitest.config.ts
+prettier.config.mjs
