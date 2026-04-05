@@ -16,17 +16,9 @@
   --color-muted: #52525b;            /* zinc-600 — texto desativado */
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html,
 body {
   height: 100%;
-  background-color: #09090b;
-  color: #4ade80;
   font-family: var(--font-jetbrains-mono), "Fira Code", "Cascadia Code", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
