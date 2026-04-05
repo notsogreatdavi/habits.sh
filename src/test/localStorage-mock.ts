@@ -1,6 +1,13 @@
-import { vi } from "vitest"
+import { vi, type MockedFunction } from "vitest"
 
-export const localStorageMock = (() => {
+export interface LocalStorageMock {
+  getItem: MockedFunction<(key: string) => string | null>
+  setItem: MockedFunction<(key: string, value: string) => void>
+  removeItem: MockedFunction<(key: string) => void>
+  clear: MockedFunction<() => void>
+}
+
+export const localStorageMock: LocalStorageMock = (() => {
   let store: Record<string, string> = {}
   return {
     getItem: vi.fn((key: string) => store[key] ?? null),
